@@ -2,13 +2,17 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: dokify-1534764274294/python-flask-docker
+  - image: dokify/python-flask-docker
     context: .
     docker: {}
   tagPolicy:
     envTemplate:
       template: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}:{{.VERSION}}'
   local: {}
+  cluster:
+    dockerConfig:
+      secretName: jenkins-docker-cfg
+    namespace: jx
 deploy:
   kubectl: {}
 profiles:
