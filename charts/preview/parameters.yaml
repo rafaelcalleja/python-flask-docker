@@ -1,7 +1,0 @@
-docker:
-  email: rafaelcalleja@gmail.com
-  password: vault:jenkins-x/docker:password
-  url: https://index.docker.io/v1/
-  username: rafaelcalleja
-enableDocker: true
-
