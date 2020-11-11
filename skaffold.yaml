@@ -9,6 +9,10 @@ build:
     envTemplate:
       template: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}:{{.VERSION}}'
   local: {}
+  cluster:
+    dockerConfig:
+      secretName: jenkins-docker-cfg
+    namespace: jx
 deploy:
   kubectl: {}
 profiles:
