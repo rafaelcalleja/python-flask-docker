@@ -6,6 +6,7 @@ image:
   repository: draft
   tag: dev
   pullPolicy: IfNotPresent
+  pullSecrets: jenkins-docker-cfg
 
 # define environment variables here as a map of key: value
 env:
